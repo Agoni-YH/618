@@ -6,6 +6,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class SkillData
 {
+    public string Name; public string SkillName;
     public string name; // 技能名称  
     public float cooldown; // 技能冷却时间（秒）  
     public float damage; // 技能伤害值  
@@ -91,7 +92,8 @@ public class SkillEditor : EditorWindow
     // 场景中活动的角色实例  
     private GameObject activeCharacterInstance;
     // 角色生成的位置  
-    private Vector3 spawnPosition = Vector3.zero;
+    private Vector3 spawnPosition = Vector3.zero;
+
     [MenuItem("技能/技能编辑器")]
     public static void Open()
     {
